@@ -1,0 +1,63 @@
+﻿<ArcGIS defaultAssembly="AGP_CoordinateWST.dll" defaultNamespace="AGP_CoordinateWST" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{d4c483ef-65ea-40c5-b1ed-f0398812e2c3}" version="0.1" desktopVersion="3.1.41833">
+    <Name>Web search of coordinate tool</Name>
+    <Description>Tool to search of coordinate on default web search</Description>
+    <Image>Images\icons8-search-32.png</Image>
+    <Author>Alexander Karandeev</Author>
+    <Company>Personal developer</Company>
+    <Date>5/3/2023 11:25:52 AM</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="AGP_CoordinateWST_Module" className="Module1" autoLoad="false" caption="Module1">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <!--<tab id="AGP_CoordinateWST_Tab1" caption="New Tab">
+          <group refID="AGP_CoordinateWST_Group1"/>
+        </tab>-->
+      </tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="AGP_CoordinateWST_Group1" caption="Web Search" appearsOnAddInTab="true">
+          <!-- host controls within groups -->
+          <tool refID="AGP_CoordinateWST_AGP_CoordinateWST_MapTool" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <tool id="AGP_CoordinateWST_AGP_CoordinateWST_MapTool" 
+			  caption="Web search of coordinate" 
+			  className="AGP_CoordinateWST_MapTool" 
+			  loadOnClick="true"
+			  smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/Editing_Background_Grid_Set_OriginRotation16.png"
+			  largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/Editing_Background_Grid_Set_OriginRotation32.png"
+			condition="esri_mapping_mapPane">
+          <tooltip heading="Tooltip Heading">Tool to search of coordinate on default web search<disabledText /></tooltip>
+        </tool>
+        <button id="AGP_CoordinateWST_AGP_CoordinateWST_MapTool_Menu_Items_Button1" 
+				caption="Bing Maps" className="AGP_CoordinateWST_MapTool_Menu_button1" loadOnClick="true" 
+				smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericApply16.png" 
+				largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericApply32.png">
+          <tooltip heading="Menu Button 1">Bing Maps<disabledText /></tooltip>
+        </button>
+        <button id="AGP_CoordinateWST_AGP_CoordinateWST_MapTool_Menu_Items_Button2" 
+				caption="OpenStreetMap" 
+				className="AGP_CoordinateWST_MapTool_Menu_button2" 
+				loadOnClick="true" 
+				smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericApply16.png" 
+				largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericApply32.png">
+          <tooltip heading="Menu Button 2">OpenStreetMap<disabledText /></tooltip>
+        </button>
+      </controls>
+      <menus>
+        <menu id="AGP_CoordinateWST_AGP_CoordinateWST_MapTool_Menu" caption="AGP _CoordinateWST_MapTool_Menu" smallImage="GenericButtonGreen16.png" largeImage="GenericButtonGreen32.png">
+          <button refID="AGP_CoordinateWST_AGP_CoordinateWST_MapTool_Menu_Items_Button1" />
+          <button refID="AGP_CoordinateWST_AGP_CoordinateWST_MapTool_Menu_Items_Button2" />
+        </menu>
+      </menus>
+    </insertModule>
+  </modules>
+</ArcGIS>

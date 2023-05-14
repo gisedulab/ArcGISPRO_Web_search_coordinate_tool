@@ -1,11 +1,11 @@
 ## Tool for coordinates searching on web mapping platform
 
 <!-- TODO: Write a brief abstract explaining this sample -->
-Left click on Map - opens Google Maps.
-Right click on Map - opens Bing Maps, OpenStreetMap, Google Street View, Wikipedia or custom (default - Baidu Maps)
-![UI](Screenshots/screenshot2.jpg)
-It saves a few clicks each time.
-![UI](Screenshots/screenshot2.jpg)
+Left click on Map - opens Google Maps.<br />
+Right click on Map - opens Bing Maps, OpenStreetMap, Google Street View, Wikipedia or custom (default - Baidu Maps)<br />
+![UI](Screenshots/screenshot2.jpg)<br />
+It saves a few clicks each time.<br />
+![UI](Screenshots/screenshot1.jpg)<br />
    
 <!-- TODO: Fill this section below with metadata about this sample-->
 ```
@@ -31,10 +31,10 @@ The file will be created after first click on tool's button in ribbon.
 3. Second line - web search string for Custom button.
 4. "LATITUDE" and "LONGITUDE" should be used to mark where coordinates must be in web search string.
 
-Web search string examples:
-http://maps.google.com/maps?q=LATITUDE LONGITUDE
-https://www.bing.com/maps?q=LATITUDE LONGITUDE
-https://en.wikipedia.org/wiki/Special:Nearby#/coord/LATITUDE,LONGITUD
-https://www.openstreetmap.org/search?query=LATITUDE LONGITUDE
+## Web search string examples:
+http://maps.google.com/maps?q=LATITUDE LONGITUDE<br />
+https://www.bing.com/maps?q=LATITUDE LONGITUDE<br />
+https://en.wikipedia.org/wiki/Special:Nearby#/coord/LATITUDE,LONGITUD<br />
+https://www.openstreetmap.org/search?query=LATITUDE LONGITUDE<br />
 http://map.baidu.com/?latlng=LATITUDE,LONGITUDE
 <!-- End -->

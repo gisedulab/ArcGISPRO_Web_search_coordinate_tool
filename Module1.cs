@@ -20,6 +20,15 @@ using System.Windows.Input;
 
 namespace AGP_CoordinateWST
 {
+    public static class Globals
+    {
+        //global strings
+        public static String AGP_WS_Settingsline1 = "";
+        public static String AGP_WS_Settingsline2 = "";
+        public static String urlgoogle = "";
+        public static String urlgoogleLONGITUDE = "";
+        public static String urlgoogleLATITUDE = "";
+    }
     internal class Module1 : Module
     {
         private static Module1 _this = null;
@@ -39,6 +48,7 @@ namespace AGP_CoordinateWST
             //TODO - add your business logic
             //return false to ~cancel~ Application close
             return true;
+            
         }
 
         #endregion Overrides

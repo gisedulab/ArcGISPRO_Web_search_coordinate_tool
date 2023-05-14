@@ -18,6 +18,7 @@ using System.Linq;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.WebRequestMethods;
 
 namespace AGP_CoordinateWST
 {
@@ -70,6 +71,22 @@ namespace AGP_CoordinateWST
             {
                 UseShellExecute = true,
                 FileName = "https://en.wikipedia.org/wiki/Special:Nearby#/coord/" + Globals.urlgoogle.Replace(" ", ",")
+            };
+            System.Diagnostics.Process.Start(urlgooglestart);
+        }
+    }
+
+    internal class AGP_CoordinateWST_MapTool_Menu_button5 : Button
+    {
+        protected override void OnClick()
+        {
+            var urlgoogle1 = Globals.AGP_WS_Settingsline2;
+            urlgoogle1 = urlgoogle1.Replace("LONGITUDE", Globals.urlgoogleLONGITUDE);
+            urlgoogle1 = urlgoogle1.Replace("LATITUDE", Globals.urlgoogleLATITUDE);
+            var urlgooglestart = new System.Diagnostics.ProcessStartInfo
+            {
+                UseShellExecute = true,
+                FileName = urlgoogle1
             };
             System.Diagnostics.Process.Start(urlgooglestart);
         }

@@ -1,8 +1,8 @@
 ﻿<ArcGIS defaultAssembly="AGP_CoordinateWST.dll" defaultNamespace="AGP_CoordinateWST" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
-  <AddInInfo id="{d4c483ef-65ea-40c5-b1ed-f0398812e2c3}" version="0.2" desktopVersion="3.1.41833">
-    <Name>Web search of coordinate tool</Name>
-    <Description>Tool to search of coordinate on default web search</Description>
-    <Image>Images\icons8-search-32.png</Image>
+  <AddInInfo id="{d4c483ef-65ea-40c5-b1ed-f0398812e2c3}" version="0.3" desktopVersion="3.1.41833">
+    <Name>Tool for coordinates searching on web mapping platform</Name>
+    <Description>Left click on Map - opens Google Maps. Right click on Map - opens Bing Maps, OpenStreetMap, Google Street View, Wikipedia or custom (default - Baidu Maps)</Description>
+    <Image>Screenshots/screenshot2.jpg</Image>
     <Author>Alexander Karandeev</Author>
     <Company>Personal developer</Company>
     <Date>5/3/2023 11:25:52 AM</Date>
@@ -35,7 +35,7 @@
 			  smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/HTMLPopUpTool16.png"
 			  largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/HTMLPopUpTool32.png"
 			condition="esri_mapping_mapPane">
-          <tooltip heading="Web search">Left click:&#xD;&#xA;   Google Maps&#xD;&#xA;&#xD;&#xA;Right click:&#xD;&#xA;   Bing Maps,&#xD;&#xA;   OpenStreetMap,&#xD;&#xA;   Googel Street View,&#xD;&#xA;   Wikipedia<disabledText /></tooltip>
+          <tooltip heading="Web search">Left click:&#xD;&#xA;   Google Maps&#xD;&#xA;&#xD;&#xA;Right click:&#xD;&#xA;   Bing Maps,&#xD;&#xA;   OpenStreetMap,&#xD;&#xA;   Google Street View,&#xD;&#xA;   Wikipedia<disabledText /></tooltip>
         </tool>
         <button id="AGP_CoordinateWST_AGP_CoordinateWST_MapTool_Menu_Items_Button1" 
 				caption="Bing Maps" className="AGP_CoordinateWST_MapTool_Menu_button1" loadOnClick="true" 
@@ -67,6 +67,16 @@
 				  largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/GenericProperties32.png">
 			      <tooltip heading="Web search">Wikipedia<disabledText /> </tooltip>
 		  </button>
+		  <button id="AGP_CoordinateWST_AGP_CoordinateWST_MapTool_Menu_Items_Button5"
+				  caption="Custom"
+				  className="AGP_CoordinateWST_MapTool_Menu_button5"
+				  loadOnClick="true"
+				  smallImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/Map16.png"
+				  largeImage="pack://application:,,,/ArcGIS.Desktop.Resources;component/Images/Map32.png">
+					<tooltip heading="Web search">
+				  Custom<disabledText />
+			  </tooltip>
+		  </button>
       </controls>
       <menus>
         <menu id="AGP_CoordinateWST_AGP_CoordinateWST_MapTool_Menu" caption="AGP _CoordinateWST_MapTool_Menu" smallImage="GenericButtonGreen16.png" largeImage="GenericButtonGreen32.png">
@@ -74,6 +84,7 @@
           <button refID="AGP_CoordinateWST_AGP_CoordinateWST_MapTool_Menu_Items_Button2" />
 		  <button refID="AGP_CoordinateWST_AGP_CoordinateWST_MapTool_Menu_Items_Button3" />
 		  <button refID="AGP_CoordinateWST_AGP_CoordinateWST_MapTool_Menu_Items_Button4" />
+		  <button refID="AGP_CoordinateWST_AGP_CoordinateWST_MapTool_Menu_Items_Button5" />
         </menu>
       </menus>
     </insertModule>

@@ -42,7 +42,7 @@ namespace AGP_CoordinateWST
                 StreamReader sr = new StreamReader(settingsPath);
                 //Read the first line of text
                 Globals.AGP_WS_Settingsline1 = sr.ReadLine();
-                if (Globals.AGP_WS_Settingsline1.Contains("http://") is false) {Globals.AGP_WS_Settingsline1 = "http://maps.google.com/maps?q=LATITUDE LONGITUDE"; }
+                if (Globals.AGP_WS_Settingsline1.Contains("http") is false) {Globals.AGP_WS_Settingsline1 = "http://maps.google.com/maps?q=LATITUDE LONGITUDE"; }
                 //Read the second line of text
                 while (sr.Peek() >= 0)
                 {
@@ -50,7 +50,7 @@ namespace AGP_CoordinateWST
                 }
                 //close the file
                 sr.Close();
-                if (Globals.AGP_WS_Settingsline2.Contains("http://") is false) { Globals.AGP_WS_Settingsline2 = "http://map.baidu.com/?latlng=LATITUDE,LONGITUDE"; } 
+                if (Globals.AGP_WS_Settingsline2.Contains("http") is false) { Globals.AGP_WS_Settingsline2 = "http://map.baidu.com/?latlng=LATITUDE,LONGITUDE"; } 
             }
             else
             {

@@ -2,7 +2,7 @@
 
 <!-- TODO: Write a brief abstract explaining this sample -->
 Left click on Map - opens Google Maps.<br />
-Right click on Map - opens Bing Maps, OpenStreetMap, Google Street View, Wikipedia or custom (default - Baidu Maps)<br />
+Right click on Map - opens Bing Maps, OpenStreetMap, Google Street View, Wikipedia or custom (default - Baidu Maps).<br />
 ![UI](Screenshots/screenshot2.jpg)<br />
 It saves a few clicks each time.<br />
 ![UI](Screenshots/screenshot1.jpg)<br />
@@ -24,9 +24,9 @@ Visual Studio:         2022
 <!-- End -->
 ## How to change web mapping platform
 <!-- TODO: Explain how this sample can be used. To use images in this section, create the image file in your sample project's screenshots folder. Use relative url to link to this image using this syntax: ![My sample Image](FacePage/SampleImage.png) -->
-1. Open file AGP_CoordinateWST.txt 
-It can be found here: User Folder\Documents\ArcGIS\AddIns\ArcGISPro 
-The file will be created after first click on tool's button in ribbon.
+1. Open file AGP_CoordinateWST.txt<br />
+It can be found here: User Folder\Documents\ArcGIS\AddIns\ArcGISPro<br />
+The file will be created after first click on tool's button in ribbon.<br />
 2. First line - web search string for Left click.
 3. Second line - web search string for Custom button.
 4. "LATITUDE" and "LONGITUDE" should be used to mark where coordinates must be in web search string.
